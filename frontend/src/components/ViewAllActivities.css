@@ -1,0 +1,150 @@
+
+
+/* Global Layout */
+.view-all-container {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f8fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #e8eef3;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0e151b;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0e151b;
+  margin-top: 20px;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+  width: 90%;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #e8eef3;
+  width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* background: url('/images/user-placeholder.png') center/cover; */
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0e151b;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #0e151b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+  background: white;
+}
+
+.back-dashboard-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c90e2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-dashboard-btn:hover {
+  background-color: #2474b5;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.recent-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Activities */
+.activities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafb;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.activity-time {
+  font-size: 14px;
+  color: #60748a;
+}
