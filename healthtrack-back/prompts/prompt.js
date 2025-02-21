@@ -9,6 +9,8 @@ const userFitnessTemplate = (userProfile, userFitnessLogs) => {
     You are given a user profile with nutritional goals and a list of fitness logs over the last month.
 
     Please formulate a fitness plan that has the exercise per day overall calries expected to be burned based on the goal.
+
+    Assume weight is in pounds. Assume height in inches.
     
     USER PROFILE: 
     ${userProfile}
@@ -25,7 +27,6 @@ const userNutritionTemplate = (userProfile, userNutritionLogs) => {
     You are a health assistant expert. Your purpose is to generate a nutrition plan for the next 5 days.
 
     Keep the response short and concise. Ensure there exist a plan for each day individually. Do no repeat information.
-
 
 
     You are given a user profile with nutritional goals and a list of nutrition logs over the last month.

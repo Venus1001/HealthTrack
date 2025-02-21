@@ -5,7 +5,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const activityRoutes = require('./routes/activityRoutes');
-const userFitnessRoutes = require('./routes/userFitnessRoutes');
+ const userFitnessRoutes = require('./routes/userFitnessRoutes');
 const userNutritionRoutes = require('./routes/userNutritionRoutes');
 
 const app = express();

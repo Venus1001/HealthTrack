@@ -10,6 +10,7 @@ const UserFitnessSchema = new mongoose.Schema(
             steps: { type: Number },
             calories: { type: Number },
             activity: { type: String },
+            comment: { type: String }
         }
 );
 

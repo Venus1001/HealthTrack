@@ -7,7 +7,8 @@ async function user_auth(req, res, next) {
   // Implement user auth logic
   // const token = req.cookies.token;
   try {
-    const tokenHead = req.headers["authorization"];
+
+    const tokenHead = res.headers["authorization"];
     // console.log(tokenHead);
 
     const token = tokenHead.split(" ")[1];

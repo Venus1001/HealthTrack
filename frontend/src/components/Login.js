@@ -46,7 +46,7 @@ const Login = () => {
               </clipPath>
             </defs>
           </svg>
-          <h2>HealthTrack</h2>
+          <h2><a href="/">HealthTrack</a></h2>
         </div>
       </header>
       <div className="form-container">
