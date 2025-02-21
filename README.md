@@ -1,115 +1,173 @@
----
+# HealthTrack
 
-# Health and Fitness App
-
-Welcome to the Health and Fitness App repository! This application is designed to help users monitor and improve their physical activities, dietary habits, sleep patterns, and mental health. The app includes features for tracking progress, setting goals, and receiving reminders to stay on track with personal health and fitness objectives.
+**HealthTrack** is a web-based application designed to help users monitor and manage their health data effectively. Whether you're tracking your daily steps, calorie intake, or exercise routines, HealthTrack provides a simple and intuitive interface to log and analyze your health metrics.
 
 ## Features
 
-### Physical Activities
-- **Exercise Tracking**
-- **Step Counter**
-- **Calorie Burn Tracker**
-- **Workout Planner**
+- **User Authentication**: Secure login and registration system to protect user data.
+- **Health Data Logging**: Log daily health metrics such as steps, calories, food, and exercise.
+- **Goal Setting**: Set and track personalized health goals.
+- **OpenAI Integration**: Get personalized health recommendations based on your logged data.
 
-### Dietary Habits
-- **Food Diary**
-- **Calorie Counter**
-- **Nutrition Tracker**
-- **Meal Planner**
+## Technologies Used
 
-### Sleep Patterns
-- **Sleep Tracker**
-- **Sleep Quality Analysis**
-- **Sleep Duration Monitoring**
-- **Sleep Schedule Reminder**
-
-### Mental Health
-- **Mood Tracker**
-- **Stress Level Monitoring**
-- **Meditation Timer**
-- **Journaling**
-
-### Reminders
-- **Activity Reminders**
-- **Meal Reminders**
-- **Sleep Reminders**
-- **Mental Health Check-ins**
-
-### Goal Setting
-- **Physical Activity Goals**
-- **Dietary Goals**
-- **Sleep Goals**
-- **Mental Health Goals**
-
-### Progress Tracking
-- **Activity Progress**
-- **Dietary Progress**
-- **Sleep Progress**
-- **Mental Health Progress**
-
-## Project Structure
-
-### Mind Map
-
-The mind map provides an overview of the app's features and how they are categorized:
-
-
-### Flow Chart
-
-The flow chart outlines the application's structure and how different features are interconnected:
-
-- **Home Dashboard:** Central hub for accessing all app features.
-- **Physical Activities:** Links to exercise tracking, step counter, calorie burn tracker, and workout planner.
-- **Dietary Habits:** Links to food diary, calorie counter, nutrition tracker, and meal planner.
-- **Sleep Patterns:** Links to sleep tracker, sleep quality analysis, sleep duration monitoring, and sleep schedule reminder.
-- **Mental Health:** Links to mood tracker, stress level monitoring, meditation timer, and journaling.
-- **Reminders:** Includes activity reminders, meal reminders, sleep reminders, and mental health check-ins.
-- **Goal Setting:** Allows setting physical activity goals, dietary goals, sleep goals, and mental health goals.
-- **Progress Tracking:** Monitors activity progress, dietary progress, sleep progress, and mental health progress.
-
-## Development Status
-
-### Working
-- Exercise Tracking
-- Calorie Burn Tracker
-- Food Diary
-- Calorie Counter
-- Nutrition Tracker
-- Meditation Timer
-- Activity Progress
-
-### Need Watch
-- Step Counter
-- Sleep Duration Monitoring
-
-### Not Working
-- Sleep Quality Analysis
-
-### Not Decided Yet
-- Sleep Schedule Reminder
-- Sleep Progress
-
-## Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/BearerOP/heal-app.git](https://github.com/aadi020903/HealthTracking_Application.git
-    ```
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
-3. Start the application:
-    ```sh
-    npm start
-    ```
-
-## Contribution
-
-Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes. Make sure to follow the code of conduct and guidelines for contributing.
-
+- **Frontend**: HTML, CSS, JavaScript, React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JSON Web Tokens (JWT)
+- **OpenAI Integration**: OpenAI API for personalized recommendations
+- **Deployment**: Heroku (Backend)
 
 ---
 
-This README provides a clear overview of the app, its features, development status, and instructions for installation and contribution. Ensure to replace the placeholder links for the mind map and flow chart images with the actual paths once you upload them to the repository.
+## Getting Started
+
+Follow these instructions to set up the HealthTrack project locally on your machine.
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- MongoDB Atlas account or local MongoDB installation
+- OpenAI API key
+
+### Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Venus1001/HealthTrack.git
+   cd HealthTrack
+   ```
+
+2. **Install Dependencies:**
+
+   Navigate to the backend folder and install backend dependencies:
+   
+   ```bash
+   cd healthtrack-back
+   npm install
+   ```
+   
+   Navigate to the frontend folder and install frontend dependencies:
+   
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+
+3. **Set Up Environment Variables:**
+
+   Create a `.env` file in the backend folder and add the following variables:
+
+   ```env
+   MONGO_URI=<your-mongodb-connection-string>
+   JWT_SECRET=<your-jwt-secret-key>
+   OPENAI_API_KEY=<your-openai-api-key>
+   PORT=5000
+   ```
+
+   Replace `<your-mongodb-connection-string>` with your MongoDB connection string, `<your-jwt-secret-key>` with a secure secret key, and `<your-openai-api-key>` with your OpenAI API key.
+
+4. **Run the Backend Server:**
+
+   From the backend folder, start the server:
+
+   ```bash
+   npm start
+   ```
+
+   The backend server will run on [http://localhost:5001](http://localhost:5001).
+
+5. **Run the Frontend Application:**
+
+   From the frontend folder, start the React application:
+
+   ```bash
+   npm start
+   ```
+
+   The frontend application will run on [http://localhost:3000](http://localhost:3000).
+
+6. **Access the Application:**
+
+   Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to use HealthTrack.
+
+## Usage
+
+### Register/Login
+
+Create a new account or log in with existing credentials.
+
+### Log Health Data
+
+Navigate to the dashboard and log your daily health metrics (steps, calories, water intake, etc.).
+
+### Set Goals
+
+Set personalized health goals and track your achievements.
+
+### Get Recommendations
+
+Use the OpenAI-powered recommendation feature to get personalized health tips based on your logged data.
+
+---
+
+## Technical Implementation: OpenAI Recommendation Model
+
+The OpenAI Recommendation Model is integrated into HealthTrack to provide users with personalized health recommendations. Here’s how it works:
+
+### 1. Data Collection:
+
+Users log their daily health metrics (e.g., steps, calories, exercise) through the application.
+
+### 2. Data Processing:
+
+The logged data is sent to the backend, where it is processed and formatted into a prompt for the OpenAI API.
+
+### 3. OpenAI API Integration:
+
+The backend sends the formatted prompt to the OpenAI API (e.g., GPT-4) to generate personalized recommendations.
+
+**Example prompt:**
+
+```text
+Fitness Recommendation:
+Fitness Plan for Venus Hu:
+
+Day 1: Resistance Training - Burn 200 calories
+Day 2: HIIT Workout - Burn 250 calories
+Day 3: Yoga - Burn 150 calories
+Day 4: Cardio - Burn 300 calories
+Day 5: Rest day
+
+Total expected calories burned over 5 days: 900 calories.
+```
+
+### 4. Response Handling:
+
+The OpenAI API returns a text-based recommendation, which is displayed to the user on the frontend.
+
+### 5. User Interaction:
+
+Users can view and follow the recommendations to improve their health habits.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to HealthTrack, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push to the branch.
+4. Submit a pull request detailing your changes.
+
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Venus Hu**
+- **GitHub**: [Venus1001](https://github.com/Venus1001)
+- **Email**: [huxiaowen.venus@gmail.com](mailto:huxiaowen.venus@gmail.com)
+
