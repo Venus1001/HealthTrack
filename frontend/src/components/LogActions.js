@@ -10,7 +10,7 @@ const LogActions = () => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const apiBaseUrl = 'http://localhost:5001/api';
+  const apiBaseUrl = 'http://104.236.200.204:5001/api';
   const token = localStorage.getItem('token');
 
   const handleOpenForm = (formName) => {

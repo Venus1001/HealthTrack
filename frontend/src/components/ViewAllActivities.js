@@ -20,7 +20,7 @@ const ViewAllActivities = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const aiRecommendation = await axios.get(`http://localhost:5001/api/user/${context}/recommendation`, {
+        const aiRecommendation = await axios.get(`http://104.236.200.204:5001/api/user/${context}/recommendation`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

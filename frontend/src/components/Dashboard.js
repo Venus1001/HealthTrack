@@ -16,7 +16,7 @@ const Dashboard = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const apiBaseUrl = 'http://localhost:5001/api';
+  const apiBaseUrl = 'http://104.236.200.204:5001/api';
 
   const token = localStorage.getItem('token');
   
