@@ -2,7 +2,7 @@ const { OpenAI } = require('openai');
 
 
 const openai = new OpenAI({
-    apiKey: "" // Load API key from .env
+    apiKey: process.env.OPEN_AI_KEY // Load API key from .env
   });
   
   async function generateResponse(promptText) {
