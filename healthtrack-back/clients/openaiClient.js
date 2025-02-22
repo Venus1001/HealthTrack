@@ -20,5 +20,4 @@ const openai = new OpenAI({
     }
   }
   
-  
 module.exports = generateResponse
