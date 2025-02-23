@@ -20,7 +20,7 @@ const Login = () => {
     try {
       const response = await login(formData);
       localStorage.setItem('token', response.token);
-      alert('Login successful!!!');
+      alert('Login successful!');
       navigate('/dashboard');
     } catch (error) {
       alert(error.message || 'Login failed');
