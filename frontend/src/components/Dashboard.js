@@ -118,7 +118,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <header className="header">
+      <header className="header-healthtrack">
         <div className="header-logo">
         <h2><a href="/">HealthTrack</a></h2>
         </div>

@@ -11,18 +11,20 @@ body {
 }
 
 /* Container Styles */
-.signup-container, .login-container, .dashboard-container, .layout-container {
+.signup-container,
+.login-container,
+.layout-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Header */
@@ -34,6 +36,18 @@ body {
     padding: 15px 20px;
     border-bottom: 1px solid #e8eef3;
 }
+
+  .header-healthtrack {
+    width: 100%;
+    display:flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    padding: 15px 20px;
+  } 
 
 .header-logo {
     display: flex;
@@ -115,18 +129,21 @@ button:hover {
 }
 
 /* Login and Signup Links */
-.login-link, .signup-link {
+.login-link,
+.signup-link {
     margin-top: 15px;
     font-size: 14px;
 }
 
-.login-link a, .signup-link a {
+.login-link a,
+.signup-link a {
     color: #2c90e2;
     text-decoration: none;
     font-weight: bold;
 }
 
-.login-link a:hover, .signup-link a:hover {
+.login-link a:hover,
+.signup-link a:hover {
     text-decoration: underline;
 }
 
@@ -200,7 +217,8 @@ button:hover {
     text-decoration: none;
 }
 
-.sidebar-nav a:hover, .sidebar-nav a:focus {
+.sidebar-nav a:hover,
+.sidebar-nav a:focus {
     background: white;
 }
 
@@ -238,7 +256,8 @@ button:hover {
 }
 
 /* Quick Actions */
-.quick-actions-title, .recent-activities-title {
+.quick-actions-title,
+.recent-activities-title {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
@@ -296,7 +315,8 @@ button:hover {
     background: url('https://cdn.usegalileo.ai/sdxl10/4222759b-b372-4e82-b09f-097a62fcc014.png') center/cover;
 }
 
-.heart-rate, .sleep {
+.heart-rate,
+.sleep {
     background: #e8eef3;
     display: flex;
     justify-content: center;
