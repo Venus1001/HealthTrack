@@ -21,18 +21,21 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 
 .header-logo h2 {
-  font-size: 24px;
+  font-size: 50px;
   color: #4caf50; /* Green color for the logo */
 }
 
+.header-logo-text{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #0e151b;
+}
+.dashboard-title{
+  align-items: center;
+}
 .dashboard-layout {
   display: flex;
   max-width: 1200px;

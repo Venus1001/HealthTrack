@@ -41,7 +41,7 @@ const ViewAllActivities = () => {
     <>
       {
         !context && <div className="view-all-activities-container">
-          <header className="header">
+          <header className="header-healthtrack">
             <div className="header-logo">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_6_535)">
@@ -58,7 +58,7 @@ const ViewAllActivities = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <h2>HealthTrack</h2>
+              <h2><a className="header-logo-text" href="/">HealthTrack</a></h2>
             </div>
           </header>
           <h1>View All Activities</h1>

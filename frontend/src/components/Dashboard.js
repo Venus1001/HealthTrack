@@ -13,13 +13,14 @@ const Dashboard = () => {
   const [caloriesBurned, setCaloriesBurned] = useState(0);
   const [totalSteps, setTotalSteps] = useState(0);
   const [totalSleep, setTotalSleep] = useState(0);
+  const [weight, setWeight] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const apiBaseUrl = 'http://104.236.200.204:5001/api';
 
   const token = localStorage.getItem('token');
-  
+
 
   // Fetch user profile, fitness, and nutrition data
   useEffect(() => {
@@ -28,11 +29,12 @@ const Dashboard = () => {
         const profileResponse = await axios.get(`${apiBaseUrl}/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
-            
+
           },
         });
         console.log(`Profile response -> ${JSON.stringify(profileResponse.data)}`);
         setUsername(profileResponse.data.firstName);
+        setWeight(profileResponse.data.weight);
 
         const fitnessResponse = await axios.get(`${apiBaseUrl}/user/fitness`, {
           headers: {
@@ -120,7 +122,22 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <header className="header-healthtrack">
         <div className="header-logo">
-        <h2><a href="/">HealthTrack</a></h2>
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_6_535)">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535">
+                    <rect width="48" height="48" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+          <h2><a className="header-logo-text" href="/">HealthTrack</a></h2>
         </div>
       </header>
       <h1 className="dashboard-title">Dashboard</h1>
@@ -157,7 +174,7 @@ const Dashboard = () => {
           <div className="stats">
             <div className="stat-card">Steps: {totalSteps}</div>
             <div className="stat-card">Calories Burned: {caloriesBurned}</div>
-            <div className="stat-card">Heart Rate: {fitnessData.heartRate || 'N/A'} BPM</div>
+            <div className="stat-card">Weight: {weight || 'N/A'} lbs</div>
             <div className="stat-card">Sleep: {totalSleep} hours</div>
           </div>
 
@@ -168,7 +185,11 @@ const Dashboard = () => {
               {fitnessData.length > 0 ? (
                 fitnessData.map((activity, index) => (
                   <li key={index}>
-                    {activity.date}: {activity.activity}
+                    <strong>Activity:</strong> {activity.date}: {activity.activity} <br />
+                    <strong>Steps:</strong> {activity.steps} <br />
+                    <strong>Calories:</strong> {activity.calories} <br />
+
+
                   </li>
                 ))
               ) : (
@@ -184,7 +205,7 @@ const Dashboard = () => {
               {nutritionData.length > 0 ? (
                 nutritionData.map((nutrition, index) => (
                   <li key={index}>
-                    {nutrition.date}: {nutrition.category} - {nutrition.grams} grams
+                    <strong>Category:</strong>{nutrition.date}: {nutrition.category} - {nutrition.grams} grams
                   </li>
                 ))
               ) : (
